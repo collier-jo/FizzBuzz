@@ -8,10 +8,23 @@
 require 'fizzbuzz'
 
 describe 'fizzbuzz' do
-  it 'returns "fizz" when passed 3' do
-    expect(fizzbuzz(3)).to eq 'fizz'
+  it 'return "fizzbuzz" when passed multiples 3 / 5' do
+    expect(fizzbuzz(15)).to eq 'fizzbuzz'
+  end 
+  it 'returns "fizz" when passed 3' do # given
+    expect(fizzbuzz(3)).to eq 'fizz' # when / then 
+  end
+  it 'returns "buzz" when passed 5' do
+    expect(fizzbuzz(5)).to eq "buzz"
   end
 end
 
 # The "DESCRIBE" sandwhich contains the "it" filling, continaing
 # Given, When, Then (Expect)
+# number % 5 = 0
+
+=begin
+it 'returns "fizzbuzz" when passed 3/5' do 
+    expect(fizzbuzz(number % 3 == 0 && number % 5 == 0)).to eq 'fizzbuzz' # when / then 
+end
+=end 
