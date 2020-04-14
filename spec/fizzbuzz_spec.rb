@@ -7,33 +7,17 @@
 
 require 'fizzbuzz'
 
-describe 'fizz' do
-  it 'returns "fizz" when passed 3' do
-    array_3 = [3, 6, 9, 12, 18]
-    array_3.each do |num|
-      expect(fizzbuzz(num)).to eq 'fizz'
-    end
-  end
-
-  it 'returns "buzz" when passed 5' do
-    array_5 = [5, 10, 20]
-    array_5.each do |num|
-      expect(fizzbuzz(num)).to eq 'buzz'
-    end
-  end
-
-  it 'returns "fizzbuzz" when passed 5' do
-    array_3_5 = [15]
-    array_3_5.each do |num|
-      expect(fizzbuzz(num)).to eq 'fizzbuzz'
-    end
-  end
-
-  it 'returns "number" when passed number' do
-    array_neither = [1,2,4,7,8,11,13,14,16,17,19]
-    array_neither.each do |num|
-      expect(fizzbuzz(num)).to eq num
-    end
-  end
-
-end
+describe 'fizzbuzz' do 
+	it 'return "fizz" when passed 3' do 
+		expect(fizzbuzz(6)).to eq 'fizz'
+	end 
+	it 'return "buzz" when passed 5' do 
+		expect(fizzbuzz(10)).to eq 'buzz'
+	end 
+	it 'return "fizzbuzz" when passed 15' do 
+		expect(fizzbuzz(15)).to eq 'fizzbuzz'
+	end 
+	it 'return number when passed any other number' do
+	  expect(fizzbuzz(16)).to eq 16
+	end
+end 
